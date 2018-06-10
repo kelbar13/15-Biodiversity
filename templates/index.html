@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Belly Button Biodiversity</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    </head>
+    <body>
+        <div class="jumbotron">
+            <div class="container text-center">
+                <h1>Belly Button Biodiversity</h1>
+                <h1>Dashboard</h1>
+                <p>Use the interactive charts below to explore the dataset</p>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-2">
+                    
+                    <div class="card">
+                        <h5>SELECT Sample</h5>
+                        <select id="selDataset" onchange="optionChanged(this.value)"></select>
+                    </div>
+                    <div class="card text-white bg-primary mb-3">
+                        <div class="card-header">Sample MetaData</div>
+                        <div id="sampleMetadata" class="card-body"></div>
+                    </div>
+                </div>
+                <div class="col-md-5">
+                    <div id="pie"></div>
+                </div>   
+                <div class="col-md-5">
+                    <div id="gauge"></div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div id="bubble"></div>
+                </div>
+            </div>
+            </div>
+        <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+        <script src="{{url_for('static',filename='js/index.js')}}"></script>
+       
+    </body>
+</html>
